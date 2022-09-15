@@ -9,6 +9,7 @@
 --border-color: rgba(236, 236, 236, 1);
 --contact-logo-color:#AFB1B8;
 --footer-icon-color:rgba(255, 255, 255, 0.1);
+--hero-bg-color:rgba(47, 48, 58, 0.4);
  } 
 /* * {outline: 2px solid green} */
 body {
@@ -122,11 +123,14 @@ margin-left: 50px;}
     align-items: center; 
     justify-content: center;
 }
-.background {
+.background-hero {
+    margin: 0 auto;
     background-image: url(../images/hero-bg.jpg);
     background-repeat: no-repeat;
     background-position: 50% 50%;
+    max-width: 1600px;
 }
+
 /* .hero>.container { 
     padding-top: 200px ;
     padding-bottom: 280px;
@@ -229,6 +233,7 @@ margin-left: 50px;}
     background-color: var(--pure-white-color);
     border-radius: 0 0 4px 4px;
     text-align: center;
+    box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2);
 }
 .member-profession {
     font-size: 16px;
@@ -307,7 +312,9 @@ padding: 60px 0 60px;
 }
 .filter-btn:hover {
     background-color: var(--accent-color); 
-    color: var(--pure-white-color);}
+    color: var(--pure-white-color);
+    box-shadow: 0px 3px 1px 0px rgba(0, 0, 0, 0.1);
+    }
 .filter-btn:focus {background-color: var(--accent-color); 
     color: var(--pure-white-color);}
 /* проєкти */
@@ -325,6 +332,9 @@ padding: 60px 0 60px;
     }
 .project-item { 
     flex-basis: calc((100% - 60px) /3); 
+}
+.project-item:hover {
+    box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.16);
 }
 .project-descr { 
     padding: 20px 24px;
