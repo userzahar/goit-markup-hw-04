@@ -6,7 +6,10 @@
 --pure-black-color:#000000;
 --pure-white-color:#ffffff;
 --transparent-white:#FFFFFF99;
---border-color: rgba(236, 236, 236, 1); } 
+--border-color: rgba(236, 236, 236, 1);
+--contact-logo-color:#AFB1B8;
+--footer-icon-color:rgba(255, 255, 255, 0.1);
+ } 
 /* * {outline: 2px solid green} */
 body {
     color: var(--primary-text-color); 
@@ -23,8 +26,11 @@ body {
 .list.flex {
     margin-left: auto;}
 .list.flex .list-item + .list-item {margin-left: 50px;}
- /* Утиліти */
-.link {text-decoration: none;}
+
+ /* Утиліти---------------------------- */
+.link {
+    text-decoration: none;
+}
 .link.current {color:var(--accent-color);}
 html {box-sizing: border-box;}
 .visually-hidden {
@@ -102,8 +108,9 @@ margin-left: 50px;}
 .nav-items:focus, 
 .cantacts-mail:focus, 
 .contacts-tel:focus { color:var(--accent-color);}
-/* main головної сторінки */
-/* hero */
+
+/* main головної сторінки---------------------------- */
+/* hero -----------------------------------*/
 .hero {
     /* background-color:var(--background-color);  */
     text-align: center;
@@ -154,7 +161,7 @@ margin-left: 50px;}
     /* margin: 0 auto 0 auto */
 }
 
-    /* секція як ми працюємо */
+    /* секція як ми працюємо -----------------------------*/
     .section {     
         padding-top: 94px;
         padding-bottom: 94px;}
@@ -172,7 +179,7 @@ margin-left: 50px;}
     margin-bottom: 10px;
 }
 
-/* картинки */
+/* картинки бєкграунди--------------------------------*/
 
 .descr-item::before {
     background-color: var(--separation-color);
@@ -206,12 +213,12 @@ margin-left: 50px;}
 .item-text {
     line-height: 1.7;}
 
-    /* чим ми займаємось */
+    /* чим ми займаємось-------------------- */
 /* .section-direction>.container { padding-bottom: 94px;} */
 .section-direction .list {justify-content: space-between;}
 .section-direction.section {padding-top: 0;}
 
-/* секція наша команда */
+/* секція наша команда------------------------- */
 .team  {background-color: var(--separation-color);}
 
 .name-and-profession{
@@ -241,7 +248,7 @@ margin-left: 50px;}
 .team-member {color: var(--contrast-color);}
 .title.margin-none {margin-bottom: 50px;}
 
-/* footer */
+/* footer -------------------------------*/
 footer{
     padding-top: 60px;
     padding-bottom: 60px;
@@ -282,26 +289,11 @@ padding: 60px 0 60px;
     text-transform: uppercase;  
     margin-bottom: 20px;
 }
-.invite::after {
-    display:block;
-    content:'';
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    background-color: var(--transparent-white);
-    background-image: url(../images/instagramwhite.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-}
-.invite:hover::after {
-    background-color: var(--accent-color);
-}
+
+/* портфоліо-------------------------------- */
 
 
-/* портфоліо */
-
-
-/* фільтри */
+/* фільтри----------------------------------- */
 .filter-btn {
     background-color: var(--separation-color);
     color: var(--contrast-color);
@@ -352,3 +344,85 @@ padding: 60px 0 60px;
     font-size: 16px;
     line-height: 1.9; 
     letter-spacing: 0.06em;}
+
+    /* svg картинки---------------------------- */
+.mail-icon {
+    width:16px;
+    height:12px;
+    margin-right: 10px;
+    fill:currentColor;
+}
+.phone-icon {
+    width:10px;
+    height:16px;
+    margin-right: 10px;
+    fill:currentColor;
+}
+.team-contacts {
+    display: flex;    
+    padding: 16px 32px 0 32px;
+    justify-content: space-between;
+}
+.team-contact-link {
+    display: block;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: var(--pure-white-color);
+}
+.team-contact-link:hover {
+    background-color: var(--accent-color);
+}
+.team-contact-icon {
+    width: 44px;
+    height: 44px;
+    fill: var(--primary-text-color);
+}
+.team-contact-icon:hover {
+    fill: var(--pure-white-color);
+}
+.costumers {
+    /* border: 2px solid var(--accent-color); */
+    display: flex;
+    justify-content: space-between;
+    
+}
+.customers-item {
+    min-height: 92px;
+    padding: 16px 32px;
+    border: 1px solid var(--contact-logo-color);
+    border-radius: 4px;
+    display: block; 
+    fill: var(--contact-logo-color);
+}
+/* .customers-item:not(:first-child) {
+    margin-left: 30;
+} */
+.customers-item:hover {
+    border-color: var(--accent-color);
+    fill: var(--accent-color);
+}
+.customers-contacts {
+    width: 106px;
+    height: 60px;
+}
+.invite-list {
+    display: flex;
+}
+.invite-list>li:not(:first-child) {
+    margin-left: 10px;
+}
+.invite-link {
+    display: block;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: var(--footer-icon-color);
+}
+.invite-link:hover {
+    background-color: var(--accent-color);
+}
+.invate-icon {
+    width: 44px;
+    height: 44px;
+}
