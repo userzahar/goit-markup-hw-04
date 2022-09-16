@@ -360,18 +360,11 @@ padding: 60px 0 60px;
     letter-spacing: 0.06em;}
 
     /* svg картинки---------------------------- */
-.mail-icon {
-    width:16px;
-    height:12px;
+.contacts-icon {
     margin-right: 10px;
     fill:currentColor;
 }
-.phone-icon {
-    width:10px;
-    height:16px;
-    margin-right: 10px;
-    fill:currentColor;
-}
+
 .team-contacts {
     display: flex;    
     padding: 16px 32px 0 32px;
