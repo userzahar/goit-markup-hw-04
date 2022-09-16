@@ -381,6 +381,7 @@ padding: 60px 0 60px;
     width: 44px;
     height: 44px;
     border-radius: 50%;
+    padding:12px;
     background-color: var(--pure-white-color);
     fill: var(--primary-text-color);
 }
@@ -392,9 +393,9 @@ padding: 60px 0 60px;
     background-color: var(--accent-color);
     fill: var(--pure-white-color);
 }
-.team-contact-icon {
-    width: 44px;
-    height: 44px;
+.icon {
+    width: 20px;
+    height: 20px;
 }
 .costumers {
     display: flex;
@@ -435,6 +436,8 @@ padding: 60px 0 60px;
     height: 44px;
     border-radius: 50%;
     background-color: var(--footer-icon-color);
+    padding: 12px;
+    fill: var(--pure-white-color);
 }
 .invite-link:hover {
     background-color: var(--accent-color);
@@ -446,7 +449,7 @@ padding: 60px 0 60px;
     width: 44px;
     height: 44px;
 }
-/* картинки у як ми працюємо------------------ */
+/* картинки у -- як ми працюємо------------------ */
 .descr-icon {
     background-color: var(--separation-color);
     border-radius: 4px;
@@ -454,4 +457,10 @@ padding: 60px 0 60px;
     width: 270px;
     height: 120px;
     margin-bottom: 30px;
+    padding: 25px 100px;
+    fill: var(--contrast-color);
+}
+.funny-icon {
+width: 70px;
+height: 70px;
 }
