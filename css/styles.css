@@ -185,7 +185,7 @@ margin-left: 50px;}
 
 /* картинки бєкграунди--------------------------------*/
 
-.descr-item::before {
+/* .descr-item::before {
     background-color: var(--separation-color);
     border-radius: 4px;
     display:block;
@@ -213,7 +213,7 @@ margin-left: 50px;}
     background-image: url(../images/astronaut.svg);
     background-repeat: no-repeat;
     background-position: center;
-}
+} */
 .item-text {
     line-height: 1.7;}
 
@@ -445,4 +445,13 @@ padding: 60px 0 60px;
 .invate-icon {
     width: 44px;
     height: 44px;
+}
+/* картинки у як ми працюємо------------------ */
+.descr-icon {
+    background-color: var(--separation-color);
+    border-radius: 4px;
+    display:block;
+    width: 270px;
+    height: 120px;
+    margin-bottom: 30px;
 }
