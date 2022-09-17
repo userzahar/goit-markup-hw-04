@@ -7,9 +7,9 @@
 --pure-white-color:#ffffff;
 --transparent-white:#FFFFFF99;
 --border-color: rgba(236, 236, 236, 1);
---contact-logo-color:#AFB1B8;
 --footer-icon-color:rgba(255, 255, 255, 0.1);
---hero-bg-color:rgba(47, 48, 58, 0.4);
+--gradient-color: rgba(47, 48, 58, 0.4);
+--icon-color: #AFB1B8;
  } 
 /* * {outline: 2px solid green} */
 body {
@@ -113,11 +113,8 @@ margin-left: 50px;}
 /* main головної сторінки---------------------------- */
 /* hero -----------------------------------*/
 .hero {
-    /* background-color:var(--background-color);  */
     text-align: center;
     min-height: 600px;
-    /* padding-top: 200px;
-    padding-bottom: 280px; */
     display: flex;
     flex-direction: column;
     align-items: center; 
@@ -125,19 +122,11 @@ margin-left: 50px;}
 }
 .background-hero {
     margin: 0 auto;
-    background-image: url(../images/hero-bg.jpg);
+    background-image: linear-gradient(90deg, var(--gradient-color), var(--gradient-color)), url(../images/hero-bg.jpg);
     background-repeat: no-repeat;
-    background-position: 50% 50%;
     max-width: 1600px;
-    background-color:var(--background-color);
 }
 
-/* .hero>.container { 
-    padding-top: 200px ;
-    padding-bottom: 280px;
-    text-align: center;
-    padding-left: 270px;
-    padding-right: 270px;} */
 .hero-title {
     color:var(--pure-white-color); 
     font-weight: 900;
@@ -147,7 +136,6 @@ margin-left: 50px;}
     text-transform: uppercase;
     margin-bottom: 30px;
     width: 696px;
-/*  margin: 0 auto 30 auto */
 }
 .hero-btn {
     background-color: var(--accent-color);
@@ -186,35 +174,6 @@ margin-left: 50px;}
 
 /* картинки бєкграунди--------------------------------*/
 
-/* .descr-item::before {
-    background-color: var(--separation-color);
-    border-radius: 4px;
-    display:block;
-    content:'';
-    width: 270px;
-    height: 120px;
-    margin-bottom: 30px;
-}
-.anten::before {
-    background-image: url(../images/antenna.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-}
-.clock::before {
-    background-image: url(../images/clock.svg);
-    background-repeat: no-repeat;
-    background-position: center; 
-}
-.diagram::before {
-    background-image: url(../images/diagram.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-}
-.astronaut::before {
-    background-image: url(../images/astronaut.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-} */
 .item-text {
     line-height: 1.7;}
 
@@ -265,6 +224,7 @@ footer .logo {
 }
 footer .container {
     display: flex;
+    align-items: baseline;
 }
 .footer-first {
 padding: 60px 0 60px;
@@ -287,13 +247,14 @@ padding: 60px 0 60px;
 .address-tel:focus {color: var(--accent-color);}
 .invite {
     margin-left: 70px;
-    padding: 12px 0 40px;
 }
 .invite-text {
     display: block;
     color: var(--pure-white-color);
     text-transform: uppercase;  
     margin-bottom: 20px;
+    font-weight: 700;
+    line-height: 16px;
 }
 
 /* портфоліо-------------------------------- */
@@ -301,6 +262,7 @@ padding: 60px 0 60px;
 
 /* фільтри----------------------------------- */
 .filter-btn {
+    padding: 6px 22px;
     background-color: var(--separation-color);
     color: var(--contrast-color);
     font-weight: 500;
@@ -314,6 +276,7 @@ padding: 60px 0 60px;
 .filter-btn:hover {
     background-color: var(--accent-color); 
     color: var(--pure-white-color);
+    border: 1px solid var(--accent-color);
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
     }
 .filter-btn:focus {background-color: var(--accent-color); 
@@ -334,10 +297,13 @@ padding: 60px 0 60px;
 .project-item { 
     flex-basis: calc((100% - 60px) /3); 
 }
-.project-item:hover {
+.project-link {
+    display: block;
+}
+.project-link:hover {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
-.project-item:focus {
+.project-link:focus {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 .project-descr { 
@@ -371,13 +337,14 @@ padding: 60px 0 60px;
     justify-content: space-between;
 }
 .team-contact-link {
-    display: block;
     width: 44px;
     height: 44px;
     border-radius: 50%;
-    padding:12px;
     background-color: var(--pure-white-color);
-    fill: var(--primary-text-color);
+    fill: var(--icon-color);
+    display:flex;
+    justify-content: center;
+    align-items: center;
 }
 .team-contact-link:hover {
     background-color: var(--accent-color);
@@ -395,17 +362,24 @@ padding: 60px 0 60px;
     display: flex;
     justify-content: space-between;   
 }
-.customers-item {
-    min-height: 92px;
-    padding: 16px 32px;
-    border: 1px solid var(--contact-logo-color);
+.costumers>li {
+    display: block;
+    width: 170px;
+    height: 92px;   
+    border: 1px solid var(--icon-color);
     border-radius: 4px;
-    display: block; 
-    fill: var(--contact-logo-color);
 }
-/* .customers-item:not(:first-child) {
-    margin-left: 30;
-} */
+.costumers>li:hover {
+    border-color: var(--accent-color);
+}
+.customers-item {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    fill: var(--icon-color);
+}
 .customers-item:hover {
     border-color: var(--accent-color);
     fill: var(--accent-color);
@@ -425,12 +399,13 @@ padding: 60px 0 60px;
     margin-left: 10px;
 }
 .invite-link {
-    display: block;
+    display:flex;
+    justify-content: center;
+    align-items: center;
     width: 44px;
     height: 44px;
     border-radius: 50%;
     background-color: var(--footer-icon-color);
-    padding: 12px;
     fill: var(--pure-white-color);
 }
 .invite-link:hover {
@@ -439,19 +414,20 @@ padding: 60px 0 60px;
 .invite-link:focus {
     background-color: var(--accent-color);
 }
-.invate-icon {
+/* .invite-icon {
     width: 44px;
     height: 44px;
-}
+} */
 /* картинки у -- як ми працюємо------------------ */
 .descr-icon {
     background-color: var(--separation-color);
     border-radius: 4px;
-    display:block;
+    display:flex;
+    justify-content: center;
+    align-items: center;
     width: 270px;
     height: 120px;
     margin-bottom: 30px;
-    padding: 25px 100px;
     fill: var(--contrast-color);
 }
 .funny-icon {
