@@ -28,6 +28,7 @@ body {
     margin-left: auto;}
 .list.flex .list-item + .list-item {margin-left: 50px;}
 
+
  /* Утиліти---------------------------- */
 .link {
     text-decoration: none;
@@ -79,6 +80,7 @@ img {display: block;}
     /* padding-top: 24px;
     padding-bottom: 25px; */
 }
+
 .logo {
     color: var(--accent-color); 
     font-weight: 700;
@@ -95,7 +97,10 @@ margin-left: 50px;}
     display: block;
     padding-top: 32px;
     padding-bottom: 32px;
+    display:flex;
+    align-items: center;
 }
+
 .nav-items, 
 .cantacts-mail, 
 .contacts-tel {
@@ -188,7 +193,10 @@ margin-left: 50px;}
 .name-and-profession{
         padding: 30px 0px;    
 }
-.team .list {justify-content: space-between;}
+.team .first-list {justify-content: space-between;}
+.first-list {
+    display: flex;
+}
 .team-items {
     background-color: var(--pure-white-color);
     border-radius: 0 0 4px 4px;
@@ -323,7 +331,9 @@ padding: 60px 0 60px;
 .title-descr {
     font-size: 16px;
     line-height: 1.9; 
-    letter-spacing: 0.06em;}
+    letter-spacing: 0.06em;
+    color: var(--primary-text-color);
+}
 
     /* svg картинки---------------------------- */
 .contacts-icon {
@@ -333,8 +343,9 @@ padding: 60px 0 60px;
 
 .team-contacts {
     display: flex;    
-    padding: 16px 32px 0 32px;
-    justify-content: space-between;
+    margin-top: 16px;
+    justify-content: center;
+    gap:10px;
 }
 .team-contact-link {
     width: 44px;
